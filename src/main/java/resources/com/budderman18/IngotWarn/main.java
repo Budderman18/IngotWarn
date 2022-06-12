@@ -72,7 +72,8 @@ public class main extends JavaPlugin implements Listener {
         FileConfiguration language = new YamlConfiguration();
         try {
             language.load(languagef);
-        } catch (IOException | InvalidConfigurationException e) {
+        } 
+        catch (IOException | InvalidConfigurationException e) {
             e.printStackTrace();
         }
     } 
@@ -132,10 +133,10 @@ public class main extends JavaPlugin implements Listener {
         String unsecureServerCMessage = ChatColor.translateAlternateColorCodes('&', language.getString("Unsecure-ServerC-Message")); 
         String pluginEnabledMessage = ChatColor.translateAlternateColorCodes('&', language.getString("Plugin-Enabled-Message")); 
         //check for correct version
-        if (!(Bukkit.getVersion().contains("1.18.2"))) {
+        if (!(Bukkit.getVersion().contains("1.19"))) {
             sender.sendMessage(prefixMessage + unsupportedVersionAMessage);
             sender.sendMessage(prefixMessage + unsupportedVersionBMessage);
-            sender.sendMessage(prefixMessage + unsupportedVersionCMessage);  
+            sender.sendMessage(prefixMessage + unsupportedVersionCMessage); 
         }
         //check for online mode
         if (!(getServer().getOnlineMode())) {
@@ -210,7 +211,6 @@ public class main extends JavaPlugin implements Listener {
                         i = maxWarns;
                     }
                 }
-                sender.sendMessage("Done!");
             }
             //check if no data exists
             if (exists == false) {
