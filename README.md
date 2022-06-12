@@ -6,7 +6,7 @@ FEATURES:
 
 - Warn a player
 - Set a limit to the amount of warns a player can have
-- Configure output messages with laguage.yml
+- Configure output messages with language.yml
 - Check your own warns with a command
 - Check others' warns with the command above and a separate permission
 - Manage player's files within the game, no need to edit any files except language.yml
@@ -24,6 +24,12 @@ COMMANDS:
 - edit (player) (index) (reason) - Edit a given warn for a player
 - version - Check plugin version
 - reload - Reload the plugin
+- commands - Edit commands executed on a given warncount
+  - add [warnNumber] [command] - Add a command to the given warncount
+  - delete [warnNumber] (commandNumber) - Delete a given command or all commands ion a given warncount
+  - edit [warnNumber] [commandNumber] (command) - Edit a given command
+  - clear (warnNumber) - clear all commands or all commands at a specified warncount
+  - list (warnNumber) - list all commands or all commands at a specifed warncount
 
 PERMISSIONS:
 
